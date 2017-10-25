@@ -10,14 +10,30 @@ FILENAME="recent"
 #echo $FILE $FILENAME $EXTENSION
 
 if [ -f "$FILE" ]; then
-	if [ "$EXTENSION" = "c" ]; then
-		gcc -g -Wall -Wextra -pedantic-errors "$FILE" -o "$FILENAME"
-	elif [ "$EXTENSION" = "cpp" ]; then
-		g++ -g -Wall -Wextra -pedantic-errors "$FILE" -o "$FILENAME"
-	else
-		echo "No usable extension"
-		exit 1
-	fi
+	case $EXTENSION in
+		"c")
+			gcc -g -Wall -Wextra -pedantic-errors "$FILE" -o "$FILENAME"
+			;;
+		"cpp")
+			g++ -g -Wall -Wextra -pedantic-errors -std=c++11 "$FILE" -o "$FILENAME"
+			;;
+		"go")
+			go run $FILE
+			exit 0
+			;;
+		*)
+			echo "No usable extension"
+			exit 1
+			;;
+	esac
+#	if [ "$EXTENSION" = "c" ]; then
+#		gcc -g -Wall -Wextra -pedantic-errors "$FILE" -o "$FILENAME"
+#	elif [ "$EXTENSION" = "cpp" ]; then
+#		g++ -g -Wall -Wextra -pedantic-errors -std=c++11 "$FILE" -o "$FILENAME"
+#	else
+#		echo "No usable extension"
+#		exit 1
+#	fi
 else
 	echo "File is a directory or not existend"
 	exit 1
