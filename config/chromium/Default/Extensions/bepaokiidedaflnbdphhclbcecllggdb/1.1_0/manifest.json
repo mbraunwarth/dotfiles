@@ -1,0 +1,38 @@
+{
+   "description": "Iron Man",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvkKx3MUKbmQM2U3Th5wJVgkP3+HIrdMrqNDQdkXyQ4hfwo2gkkB3ElmuAuWsMDDoZu+sR0h256AbbuQCWT4OwUD86wtBdwON1snRfRoTJPdJhJbdvG9qPRM2jI+rgeoVoYOB389y8tfQ5f00Fv3WYq8NPiT2e1DnW6vz+Gqv77NsgxUXyQE8JJeK/7DJ4TXG6knppiZYucGUFrwbW+sKJOcaa+7Z1woZPrWUDxq1GsaqmuwvlLQ0uiOrzekazQMqJU+GOD23/KlTCczEn1ferV9UT7GZAcUE4FmA0sp2W61ecr+/1JFa3M4OG87XJPxrD60AryCQi3bY8Yh07mwiywIDAQAB",
+   "manifest_version": 2,
+   "name": "Iron Man",
+   "theme": {
+      "colors": {
+         "background_tab": [ 0, 0, 0 ],
+         "bookmark_text": [ 255, 255, 255 ],
+         "button_background": [ 100, 100, 100 ],
+         "frame": [ 0, 0, 0 ],
+         "frame_inactive": [ 127, 127, 127 ],
+         "ntp_section": [ 255, 255, 255 ],
+         "ntp_section_link": [ 255, 255, 255 ],
+         "ntp_section_link_underline": [ 255, 255, 255 ],
+         "ntp_section_text": [ 255, 255, 255 ],
+         "ntp_text": [ 255, 255, 255 ],
+         "tab_background_text": [ 0, 0, 0 ],
+         "tab_text": [ 255, 255, 255 ],
+         "toolbar": [ 127, 127, 127 ]
+      },
+      "images": {
+         "theme_frame": "images/frame.png",
+         "theme_ntp_background": "images/background.jpg",
+         "theme_tab_background": "images/tab.png",
+         "theme_toolbar": "images/toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "top",
+         "ntp_background_repeat": "no-repeat"
+      },
+      "tints": {
+
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

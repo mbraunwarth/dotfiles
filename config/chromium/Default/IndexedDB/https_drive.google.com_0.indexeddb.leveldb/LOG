@@ -1,0 +1,6 @@
+2017/10/25-08:15:57.366 3125 Reusing MANIFEST /home/markus/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2017/10/25-08:15:57.366 3125 Recovering log #10
+2017/10/25-08:15:57.443 3125 Reusing old log /home/markus/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000010.log 
+2017/10/25-08:15:58.560 3602 Level-0 table #14: started
+2017/10/25-08:15:58.648 3602 Level-0 table #14: 627157 bytes OK
+2017/10/25-08:15:58.837 3602 Delete type=0 #10

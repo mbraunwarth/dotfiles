@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=setxkbmap -layout de -option caps:swapescape
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[de_DE]=caps-esc-swap
+Name=caps-esc-swap
+Comment[de_DE]=
+Comment=

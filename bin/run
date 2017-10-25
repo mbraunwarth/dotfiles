@@ -1,0 +1,31 @@
+#!/bin/bash
+# 
+# simple wrapper to run C/C++ source code from the command line
+
+FILE=$1
+EXTENSION="${FILE##*.}"
+#FILENAME="${FILE%.*}"
+FILENAME="recent"
+
+#echo $FILE $FILENAME $EXTENSION
+
+if [ -f "$FILE" ]; then
+	if [ "$EXTENSION" = "c" ]; then
+		gcc -g -Wall -Wextra -pedantic-errors "$FILE" -o "$FILENAME"
+	elif [ "$EXTENSION" = "cpp" ]; then
+		g++ -g -Wall -Wextra -pedantic-errors "$FILE" -o "$FILENAME"
+	else
+		echo "No usable extension"
+		exit 1
+	fi
+else
+	echo "File is a directory or not existend"
+	exit 1
+fi
+
+if [ "$?" = 0 ]; then
+	./$FILENAME
+	rm $FILENAME
+else
+	echo "Error while compilation"
+fi
