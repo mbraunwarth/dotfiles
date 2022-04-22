@@ -566,3 +566,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Add gaps around windows
 beautiful.useless_gap = 5
 beautiful.gap_single_client = true
+
+-- Enable compositor for transparency
+awful.spawn(terminal.." -e picom -b")
+-- Restore last wallpaper using nitrogen
+-- Make sure this is called after all display setup is done
+awful.spawn(terminal.." -e nitrogen --restore")
