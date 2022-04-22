@@ -4,7 +4,7 @@
 
 call plug#begin('~/.local/share/nvim/plugged')
  " Plugin Section
- Plug 'dracula/vim'
+" Plug 'dracula/vim'
  Plug 'ryanoasis/vim-devicons'
  Plug 'scrooloose/nerdtree'
  Plug 'preservim/nerdcommenter'
@@ -14,10 +14,12 @@ call plug#begin('~/.local/share/nvim/plugged')
  Plug 'airblade/vim-gitgutter'
  Plug 'mattn/emmet-vim'
  Plug 'tpope/vim-surround'
- Plug 'govim/govim'
- "Plug 'fatih/vim-go'
+ Plug 'fatih/vim-go'
+ Plug 'elixir-editors/vim-elixir'
  "Plug 'JuliaEditorSupport/julia-vim'
- "Plug 'rust-lang/rust.vim'
+ Plug 'rust-lang/rust.vim'
+ Plug 'cespare/vim-toml', { 'branch': 'main' }
+ Plug 'zah/nim.vim'
  "Plug 'SirVer/ultisnips'
  "Plug 'honza/vim-snippets'
  "Plug 'mhinz/vim-startify'
@@ -28,23 +30,10 @@ call plug#end()
 "## Generel Settings ###
 "#######################
 
-set mouse=a
-
-" To get hover working in the terminal we need to set ttymouse. See
-"
-" :help ttymouse
-"
-" for the appropriate setting for your terminal. Note that despite the
-" automated tests using xterm as the terminal, a setting of ttymouse=xterm
-" does not work correctly beyond a certain column number (citation needed)
-" hence we use ttymouse=sgr
-set ttymouse=sgr
-
-
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
-"set mouse=v                 " middle-click paste with 
+set mouse=v                 " middle-click paste with 
 set hlsearch                " highlight search 
 set incsearch               " incremental search
 set tabstop=4               " number of columns occupied by a tab 
@@ -52,7 +41,7 @@ set softtabstop=4           " see multiple spaces as tabstops so <BS> does the r
 set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
+set number relativenumber   " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set cc=80                   " set an 80 column border for good coding style
 set updatetime=100          "set updatetime to 100 ms (see gitgutter)
@@ -77,7 +66,7 @@ set ttyfast                 " Speed up scrolling in Vim
 "endif
 "syntax enable
 "colorscheme evening
-colorscheme dracula
+"colorscheme dracula
 
 "" Airline
 let g:airline_theme='wombat'
@@ -93,13 +82,6 @@ let g:airline#extensions#tabline#enabled=1
 " open new split panes to right and below
 set splitright
 set splitbelow
-
-
-" Suggestion: show info for completion candidates in a popup menu
-if has("patch-8.1.1904")
-    set completeopt+=popup
-    set completepopup=align:menu,border:off,highlight:Pmenu
-endif
 
 
 "#######################
