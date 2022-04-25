@@ -325,7 +325,7 @@ globalkeys = gears.table.join(
               end,
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
+    awful.key({ modkey }, "p", function()  awful.util.spawn("rofi -modi drun -show drun -show-icons -width 22 -no-click-to-exit", false)end,
               {description = "show the menubar", group = "launcher"}),
 
     -- Media keys volume control
